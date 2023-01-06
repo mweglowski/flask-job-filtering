@@ -1,0 +1,15 @@
+.job-list {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: .5em;
+}
+
+.job-item {
+	padding: .6em;
+
+	background-color: rgb(255 248 242);
+	border: 2px solid black;
+	font-size: 1.2em;
+	list-style: none;
+}

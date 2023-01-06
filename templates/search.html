@@ -1,0 +1,18 @@
+{% block body %} 
+
+<!-- <form action="/search" class="search-form"> -->
+
+  <!-- <button type="submit" class="submit-search-button styled">Search</button> -->
+<!-- </form> -->
+
+<div>RESULTS</div> 
+
+{% if jobs %}
+	{% for job in jobs %} 
+		<li class="job-item">{{ job }}</li>
+	{% endfor %}
+{% else %}
+	<h2>There is no jobs matching this filter.</h2>
+{% endif %}
+
+{% endblock %} 

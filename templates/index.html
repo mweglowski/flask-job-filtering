@@ -1,0 +1,18 @@
+{% extends "layout.html" %} 
+
+{% block body %}
+<input class="search-input" placeholder="Search for a job" type="search" autofocus name="q" autocomplete="off"/>
+
+<ul class="job-list"></ul>
+
+<script>
+	let searchInput = document.querySelector('.search-input');
+	searchInput.addEventListener('input', async (e) => {
+		let res = await fetch('/search?q=' + searchInput.value);
+		let jobs = await res.text();
+		document.querySelector('.job-list').innerHTML = jobs;
+
+		e.preventDefault()
+	})
+</script>
+{% endblock %}
