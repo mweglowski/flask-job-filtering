@@ -9,7 +9,15 @@
 
 {% if jobs %}
 	{% for job in jobs %} 
-		<li class="job-item">{{ job }}</li>
+		<li class="job-item">
+			<div>{{ job }}</div>
+			<ul class="props">
+				<!-- {% for prop in job['props'] %}
+					{{ print(prop) }}
+					<li class="prop">{{ prop }}</li>
+				{% endfor %} -->
+			</ul>
+		</li>
 	{% endfor %}
 {% else %}
 	<h2>There is no jobs matching this filter.</h2>
